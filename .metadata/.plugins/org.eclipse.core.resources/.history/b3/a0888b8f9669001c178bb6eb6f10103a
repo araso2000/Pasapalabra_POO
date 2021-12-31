@@ -1,0 +1,22 @@
+package pasapalabra;
+
+import java.util.Scanner;
+
+public class main {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		
+		AlmacenPalabras palabras = new AlmacenPalabras();
+		palabras.añadirPalabra("alvaro", "me cago en dios hijoputa");
+		
+		AlmacenJugadores almacen = new AlmacenJugadores("admin");
+		
+		almacen.nuevoJugador("alvaro", "alvaro");
+		
+		Entrenamiento entrena = new Entrenamiento(almacen.buscarJugador("alvaro", "alvaro"),24);
+		
+		entrena.jugar();
+
+	}
+}

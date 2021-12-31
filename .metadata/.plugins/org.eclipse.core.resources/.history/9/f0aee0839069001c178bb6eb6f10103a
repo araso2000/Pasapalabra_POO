@@ -1,0 +1,16 @@
+package pasapalabra;
+
+public class Entrenamiento {
+
+	private Jugador j1;
+	
+	public Entrenamiento(Jugador j) {
+		this.j1=j;
+	}
+	
+	public void jugar() {
+		if(j1.getPuntos()<=0) {
+			j1.setPuntosEntrenamiento();
+		}
+	}
+}

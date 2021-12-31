@@ -1,0 +1,50 @@
+package pasapalabra;
+
+public class Entrenamiento {
+
+	private Jugador j1;
+	private Rosco r1;
+	private int numeroLetras;
+	
+	public Entrenamiento(Jugador j,int num) {
+		this.j1=j;
+		r1 = new Rosco(num);
+		this.numeroLetras=num;
+	}
+	
+	public void jugar() {
+		if(j1.getPuntos()<=0) {
+			j1.setPuntosEntrenamiento();
+		}
+		System.out.println("*Rosco de hoy*");
+		imprimirRosco();
+		
+		for(int ii=0;ii<numeroLetras;ii++) {
+			System.out.println("Letra " + ii+1 + ": " + r1.getRosco()[ii].getInicial() + " - Definición: " + r1.getRosco()[ii].getDefinicion());
+			
+		}
+	}
+	
+	public void imprimirRosco() {
+		char temp[] = new char[24];
+		for(int ii=0;ii<24;ii++) {
+			temp[ii]=0;
+		}
+		for(int ii=0;ii<numeroLetras;ii++) {
+			temp[ii]=r1.getRosco()[ii];
+		}
+		
+		System.out.println("     " + this.r1.getRosco()[23] + this.r1.getRosco()[0]);
+		System.out.println("    " + this.r1.getRosco()[22] + " " + this.r1.getRosco()[1]);
+		System.out.println("   " + this.r1.getRosco()[21] + "  " + this.r1.getRosco()[2]);
+		System.out.println("  " + this.r1.getRosco()[20] + "   " + this.r1.getRosco()[3]);
+		System.out.println(" " + this.r1.getRosco()[19] + "    " + this.r1.getRosco()[4]);
+			 System.out.println(this.r1.getRosco()[18] + "     " + this.r1.getRosco()[5]);
+			 System.out.println(this.r1.getRosco()[17] + "     " + this.r1.getRosco()[6]);
+		System.out.println(" " + this.r1.getRosco()[16] + "    " + this.r1.getRosco()[7]);
+		System.out.println("  " + this.r1.getRosco()[15] + "   " + this.r1.getRosco()[8]);
+		System.out.println("   " + this.r1.getRosco()[14] + "  " + this.r1.getRosco()[9]);
+		System.out.println("    " + this.r1.getRosco()[13] + " " + this.r1.getRosco()[10]);
+		System.out.println("     " + this.r1.getRosco()[12] + this.r1.getRosco()[11]);
+	}
+}

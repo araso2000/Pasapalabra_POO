@@ -1,0 +1,56 @@
+package pasapalabra;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class AlmacenJugadores {
+
+	private ArrayList<Jugador> jugadores; 
+	private Jugador admin;
+	
+	public AlmacenJugadores(String clave) {
+		this.admin = new Jugador(clave);
+		jugadores = new ArrayList<Jugador>();
+		
+	}
+	
+	public Jugador buscarJugador(){
+		
+	}
+	
+	public boolean nuevoJugador() {
+		
+	}
+	
+	public boolean borrarJugador() {
+		
+	}
+	
+	public ArrayList<Jugador> ordenarGanadas(){
+		ArrayList<Jugador> array = (ArrayList<Jugador>)jugadores.clone();
+        Collections.sort(array,new CompararGanadas());
+        return(array);
+	}
+	
+	public ArrayList<Jugador> ordenarPuntos(){
+		ArrayList<Jugador> array = (ArrayList<Jugador>)jugadores.clone();
+        Collections.sort(array,new CompararPuntos());
+        return(array);
+	}
+	
+	public boolean iniciarAdmin(String clave) {
+		if(admin.getDatos()[1].equals(clave)) {
+			return(true);
+		}else {
+			return(false);
+		}
+	}
+	
+	public void mostrarClasificacion(boolean porPuntos) {
+		if(porPuntos) {
+			for(int ii=0;ii<ordenarGanadas().size();ii++) {
+				
+			}
+		}
+	}
+}

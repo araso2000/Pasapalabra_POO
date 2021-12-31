@@ -1,0 +1,24 @@
+package pasapalabra;
+
+public class Estadisticas {
+	
+	private int partidasJugadas;
+	private int partidasGanadas;
+	private int partidasEmpatadas;
+	private int partidasPerdidas;
+	private int puntos;
+	
+	public void guardarPartida(boolean ganada,boolean empate,int puntos) {
+		this.puntos=this.puntos+puntos;
+		if(ganada && !empate) {
+			this.partidasJugadas++;
+			this.partidasGanadas++;
+		}else if(!ganada && !empate) {
+			this.partidasJugadas++;
+			this.partidasPerdidas++;
+		}else if(empate) {
+			this.partidasJugadas++;
+			this.partidasEmpatadas++;
+		}
+	}
+}

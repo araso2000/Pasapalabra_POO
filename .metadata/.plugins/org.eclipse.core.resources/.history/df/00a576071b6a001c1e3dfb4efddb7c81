@@ -1,0 +1,30 @@
+package pasapalabra;
+
+import java.util.ArrayList;
+
+public class Abecedario {
+	
+	private ArrayList<Constantes> letras;
+		
+	public Abecedario() {
+		letras = new ArrayList<Constantes>();
+		for(int ii=0;ii<24;ii++) {
+			Constantes temp = new Constantes(ii,(char)('a'+ii));
+			letras.add(temp);
+		}
+	}
+	
+	public ArrayList<Constantes> getAbecedario(){
+		return(this.letras);
+	}
+	
+	public int indice(char letra) {
+		int indice = -1;
+		for(int ii=0;ii<24;ii++) {
+			if(letra==this.letras.get(ii).getLetra()) {
+				indice = this.letras.get(ii).getNumero();
+			}
+		}
+		return(indice);
+	}
+}

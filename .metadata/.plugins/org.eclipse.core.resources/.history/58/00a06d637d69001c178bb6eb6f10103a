@@ -1,0 +1,35 @@
+package pasapalabra;
+
+import java.util.ArrayList;
+
+public class AlmacenJugadores {
+
+	private ArrayList<Jugador> jugadores; 
+	private Jugador admin;
+	
+	public AlmacenJugadores(String clave) {
+		this.admin = new Jugador(clave);
+		jugadores = new ArrayList<Jugador>();
+		
+	}
+	
+	public Jugador buscarJugador(){
+		
+	}
+	
+	public boolean nuevoJugador() {
+		
+	}
+	
+	public boolean borrarJugador() {
+		
+	}
+	
+	public ArrayList<Jugador> ordenar(){
+		
+	}
+	
+	public boolean iniciarAdmin(String clave) {
+		
+	}
+}

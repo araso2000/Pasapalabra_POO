@@ -1,0 +1,25 @@
+package pasapalabra;
+
+import java.util.ArrayList;
+
+public class AlmacenPalabras {
+	
+	ArrayList<ArrayList<Palabra>> palabras;
+	Abecedario abc;
+	
+	public AlmacenPalabras() {
+		this.palabras=new ArrayList<ArrayList<Palabra>>();
+		this.abc=new Abecedario();
+	}
+	
+	public boolean añadirPalabra(String palabra,String definicion) {
+		
+	}
+	
+	public boolean comprobar(String palabra) {
+		palabra=palabra.toLowerCase();
+		char inicial = palabra.charAt(0);
+		
+	}
+
+}

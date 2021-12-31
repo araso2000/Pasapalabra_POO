@@ -1,0 +1,27 @@
+package pasapalabra;
+
+public class Jugador {
+
+	private String jugador;
+	private String clave;
+	private int puntos;
+	private boolean admin;
+	
+	public Jugador(String jugador,String clave) {
+		this.jugador=jugador;
+		this.clave=clave;
+		this.admin=false;
+	}
+	
+	public Jugador(String clave) {
+		this.jugador="admin";
+		this.clave=clave;
+		this.admin=true;
+	}
+	
+	public void mostrarHistorial() {
+		
+	}
+	
+	
+}

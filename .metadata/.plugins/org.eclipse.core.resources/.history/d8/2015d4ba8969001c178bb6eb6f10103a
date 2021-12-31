@@ -1,0 +1,11 @@
+package pasapalabra;
+
+import java.util.ArrayList;
+
+public class AlmacenPalabras {
+	
+	ArrayList<ArrayList<Palabra>> palabras;
+	
+	
+
+}

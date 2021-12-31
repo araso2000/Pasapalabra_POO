@@ -1,0 +1,6 @@
+INDEX VERSION 1.131+C:\Users\araso\Documents\eclipse-java-2021-09-R-win32-x86_64\eclipse\JavaProjects\.metadata\.plugins\org.eclipse.jdt.core
+2788350567.index
+1294430135.index
+1865797976.index
+1754057677.index
+1168949374.index
